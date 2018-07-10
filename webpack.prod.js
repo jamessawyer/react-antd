@@ -19,5 +19,5 @@ module.exports = merge(BASE_CONFIG, {
       },
     ],
   },
-  plugins: [new CleanWebpackPlugin(['dist'])]
+  plugins: [new CleanWebpackPlugin(['dist'])],
 });

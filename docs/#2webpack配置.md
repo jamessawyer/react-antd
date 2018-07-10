@@ -224,6 +224,23 @@ module.exports = merge(BASE_CONFIG, {
 
 devServer一般使用的是 **`webpack-dev-server`**
 
+设置 **`webpack.dev.js`**
+```
+module.exports = merge(BASE_CONFIG, {
+  // ...
+  devServer: {
+    stats: 'errors-only', // 控制打包信息的显示
+    host: '0.0.0.0', // 默认值是 localhost, 这样服务器外部也可以访问
+    // port, // 默认值是 8080
+    open: true, // 是否打开浏览器
+    overlay: true, // 是否显示错误遮罩
+    historyApiFallback: true, // 404时替换为index.html
+    hot: true, // 启用HMR
+  },
+  plugins: [new webpack.HotModuleReplacementPlugin()],
+});
+```
+
 
 配置参考：
   - [A tale of Webpack 4 and how to finally configure it in the right way hackernoon](https://hackernoon.com/a-tale-of-webpack-4-and-how-to-finally-configure-it-in-the-right-way-4e94c8e7e5c1)

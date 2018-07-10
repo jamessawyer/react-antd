@@ -21,11 +21,13 @@ module.exports = merge(BASE_CONFIG, {
     ],
   },
   devServer: {
-    stats: 'errors-only',
-    host: '0.0.0.0', // 默认值是 localhost
+    stats: 'errors-only', // 控制打包信息的显示
+    host: '0.0.0.0', // 默认值是 localhost, 这样服务器外部也可以访问
     // port, // 默认值是 8080
-    open: true,
-    overlay: true,
+    open: true, // 是否打开浏览器
+    overlay: true, // 是否显示错误遮罩
+    historyApiFallback: true, // 404时替换为index.html
+    hot: true, // 启用HMR
   },
   plugins: [new webpack.HotModuleReplacementPlugin()],
 });
