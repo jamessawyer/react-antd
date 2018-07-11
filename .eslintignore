@@ -43,7 +43,7 @@ flow-typed/npm/*
 # app/style.css
 # app/style.css.map
 release
-dist
+dist/*
 dll
 main.js
 main.js.map

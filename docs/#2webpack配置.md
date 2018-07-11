@@ -13,7 +13,9 @@ webpack版本为 **`V4.15.0`**, webpack的设置一般分为：
     - css sourceMaps
   - production阶段的优化
     - 单独提取 'manifest' 文件
+    - 拆包 将vendor进行提取
     - 使用 'optimization.splitChunk' 对打包文件进行拆包处理
+    - 使用DLL打包
   - 使用一些多核并行的处理方式，比如使用 'HappyPack'
 
 
@@ -239,6 +241,22 @@ module.exports = merge(BASE_CONFIG, {
   },
   plugins: [new webpack.HotModuleReplacementPlugin()],
 });
+```
+
+## 5.css文件处理
+
+css文件处理设计到几个方面：
+  - 采用css样式类型，初步使用postcss
+  - 开发css样式处理
+  - production css压缩，提取
+
+安装依赖：
+```
+# mini-css-extract-plugin 用来提取css 替换 extract-text-webpack-plugin插件
+# optimize-css-assets-webpack-plugin 优化和压缩CSS资源
+# cssnano css压缩工具
+# postcss-safe-parser 用在 optimize-css-assets-webpack-plugin 中的解析器， 避免css报错
+yarn add -D style-loader css-loader postcss-loader precss postcss-cssnext optimize-css-assets-webpack-plugin mini-css-extract-plugin cssnano postcss-safe-parser
 ```
 
 

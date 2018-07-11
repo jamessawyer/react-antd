@@ -18,6 +18,24 @@ module.exports = merge(BASE_CONFIG, {
         exclude: /[\\/]node_modules[\\/]/,
         include: path.resolve(__dirname, 'src'),
       },
+      {
+        test: /\.p?css$/,
+        use: [
+          {
+            loader: 'style-loader',
+          },
+          {
+            loader: 'css-loader',
+            options: {
+              importLoaders: 1,
+            },
+          },
+          {
+            loader: 'postcss-loader',
+          },
+        ],
+        exclude: /[\\/]node_modules[\\/]/,
+      },
     ],
   },
   devServer: {

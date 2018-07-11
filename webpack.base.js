@@ -11,6 +11,7 @@ module.exports = {
   resolve: {
     extensions: ['.js', '.jsx', '.json', '.css', '.pcss'],
   },
+  devtool: devMode ? 'cheap-eval-source-map' : 'source-map',
   plugins: [
     new HtmlWebpackPlugin({
       title: 'React Antd 管理后台',

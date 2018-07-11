@@ -1,0 +1,32 @@
+:root {
+  --mainColor: yellow;
+  --mainFont: 40px;
+}
+
+body {
+  background: var(--mainColor);
+  display: flex;
+}
+
+::placeholder {
+  color: blue;
+}
+
+h1 {
+  font-size: var(--mainFont);
+  color: red;
+}
+
+h2 {
+  font-size: 20px;
+}
+
+#section {
+  background: lightblue;
+  height: 20vh;
+
+  p {
+    font-size: 30px;
+    color: black;
+  }
+}
