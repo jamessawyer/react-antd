@@ -3,10 +3,6 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
-  "scripts": {
-    "start": "cross-env NODE_ENV=development webpack-dev-server --display-error-details --color --inline --config webpack.dev.js",
-    "build": "cross-env NODE_ENV=production webpack --progress --colors --config webpack.prod.js"
-  },
   "devDependencies": {
     "babel-core": "^6.26.3",
     "babel-eslint": "^8.2.5",
@@ -28,6 +24,8 @@
     "eslint-plugin-react": "^7.10.0",
     "happypack": "^5.0.0",
     "html-webpack-plugin": "^3.2.0",
+    "husky": "^0.14.3",
+    "lint-staged": "^7.2.0",
     "mini-css-extract-plugin": "^0.4.1",
     "optimize-css-assets-webpack-plugin": "^4.0.3",
     "postcss-cssnext": "^3.1.0",
@@ -36,6 +34,9 @@
     "precss": "^3.1.2",
     "prettier": "^1.13.7",
     "style-loader": "^0.21.0",
+    "stylelint": "^9.3.0",
+    "stylelint-config-standard": "^18.2.0",
+    "stylelint-order": "^0.8.1",
     "uglifyjs-webpack-plugin": "^1.2.7",
     "webpack": "^4.15.1",
     "webpack-cli": "^3.0.8",
@@ -47,5 +48,25 @@
     "prop-types": "^15.6.2",
     "react": "^16.4.1",
     "react-dom": "^16.4.1"
-  }
+  },
+  "scripts": {
+    "lint-css": "stylelint \"src/**/*.{css,less,styl,scss,sass,sss}\"",
+    "fix-css": "yarn run lint-css --fix",
+    "start": "cross-env NODE_ENV=development webpack-dev-server --display-error-details --color --inline --config webpack.dev.js",
+    "build": "cross-env NODE_ENV=production webpack --progress --colors --config webpack.prod.js"
+  },
+  "lint-staged": {
+    "linters": {
+      "*.{css,less,styl,scss,sass,sss}": [
+        "stylelint --fix",
+        "git add --force"
+      ]
+    }
+  },
+  "browserslist": [
+    ">1%",
+    "last 4 versions",
+    "Firefox ESR",
+    "not ie < 9"
+  ]
 }
