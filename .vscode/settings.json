@@ -6,6 +6,7 @@
   "eslint.autoFixOnSave": true,
   "eslint.alwaysShowStatus": true,
   "prettier.disableLanguages": ["js"],
+  "javascript.suggestionActions.enabled": false,
   "search.exclude": {
     "**/node_modules": true,
     "**/bower_components": true,
