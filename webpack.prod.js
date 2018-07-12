@@ -12,6 +12,7 @@ module.exports = merge(BASE_CONFIG, {
     path: path.resolve(__dirname, 'dist'),
     chunkFilename: 'js/[name].[chunkhash:8].js',
     filename: 'js/[name].[hash:8].js',
+    publicPath: '/',
   },
   optimization: {
     minimizer: [
@@ -36,9 +37,20 @@ module.exports = merge(BASE_CONFIG, {
         use: [
           MiniCssExtractPlugin.loader,
           // 'css-loader?modules&importLoaders=1&localIdentName=[local]_[hash:base64:6]',
-          'css-loader',
+          {
+            loader: 'css-loader',
+            options: {
+              // modules: true,
+              sourceMap: true,
+              importLoaders: 1,
+              localIdentName: '[name]__[local]__[hash:base64:5]',
+            },
+          },
           {
             loader: 'postcss-loader',
+            options: {
+              sourceMap: true,
+            },
           },
         ],
       },

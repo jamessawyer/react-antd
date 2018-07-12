@@ -5412,7 +5412,7 @@ performance-now@^2.1.0:
   version "2.1.0"
   resolved "http://registry.npm.taobao.org/performance-now/download/performance-now-2.1.0.tgz#6309f4e0e5fa913ec1c69307ae364b4b377c9e7b"
 
-pify@^2.0.0:
+pify@^2.0.0, pify@^2.3.0:
   version "2.3.0"
   resolved "http://registry.npm.taobao.org/pify/download/pify-2.3.0.tgz#ed141a6ac043a849ea588498e7dca8b15330e90c"
 
@@ -5762,6 +5762,19 @@ postcss-discard-unused@^2.2.1:
     postcss "^5.0.14"
     uniqs "^2.0.0"
 
+postcss-easy-import@^3.0.0:
+  version "3.0.0"
+  resolved "http://registry.npm.taobao.org/postcss-easy-import/download/postcss-easy-import-3.0.0.tgz#8eaaf5ae59566083d0cae98735dfd803e3ab194d"
+  dependencies:
+    globby "^6.1.0"
+    is-glob "^4.0.0"
+    lodash "^4.17.4"
+    object-assign "^4.0.1"
+    pify "^3.0.0"
+    postcss "^6.0.11"
+    postcss-import "^10.0.0"
+    resolve "^1.1.7"
+
 postcss-extend-rule@^1.1.0:
   version "1.1.0"
   resolved "http://registry.npm.taobao.org/postcss-extend-rule/download/postcss-extend-rule-1.1.0.tgz#11e4d590ffe4253b853ef1fc03be7167da607d38"
@@ -5805,6 +5818,16 @@ postcss-image-set-polyfill@^0.3.5:
   dependencies:
     postcss "^6.0.1"
     postcss-media-query-parser "^0.2.3"
+
+postcss-import@^10.0.0:
+  version "10.0.0"
+  resolved "http://registry.npm.taobao.org/postcss-import/download/postcss-import-10.0.0.tgz#4c85c97b099136cc5ea0240dc1dfdbfde4e2ebbe"
+  dependencies:
+    object-assign "^4.0.1"
+    postcss "^6.0.1"
+    postcss-value-parser "^3.2.3"
+    read-cache "^1.0.0"
+    resolve "^1.1.7"
 
 postcss-initial@^2.0.0:
   version "2.0.0"
@@ -6554,6 +6577,10 @@ raf@^3.4.0:
   dependencies:
     performance-now "^2.1.0"
 
+ramda@^0.25.0:
+  version "0.25.0"
+  resolved "http://registry.npm.taobao.org/ramda/download/ramda-0.25.0.tgz#8fdf68231cffa90bc2f9460390a0cb74a29b29a9"
+
 randomatic@^3.0.0:
   version "3.0.0"
   resolved "http://registry.npm.taobao.org/randomatic/download/randomatic-3.0.0.tgz#d35490030eb4f7578de292ce6dfb04a91a128923"
@@ -7001,6 +7028,12 @@ react@^16.4.1:
     object-assign "^4.1.1"
     prop-types "^15.6.0"
 
+read-cache@^1.0.0:
+  version "1.0.0"
+  resolved "http://registry.npm.taobao.org/read-cache/download/read-cache-1.0.0.tgz#e664ef31161166c9751cdbe8dbcf86b5fb58f774"
+  dependencies:
+    pify "^2.3.0"
+
 read-pkg-up@^1.0.1:
   version "1.0.1"
   resolved "http://registry.npm.taobao.org/read-pkg-up/download/read-pkg-up-1.0.1.tgz#9d63c13276c065918d57f002a57f40a1b643fb02"
@@ -7317,7 +7350,7 @@ resolve-url@^0.2.1:
   version "0.2.1"
   resolved "http://registry.npm.taobao.org/resolve-url/download/resolve-url-0.2.1.tgz#2c637fe77c893afd2a663fe21aa9080068e2052a"
 
-resolve@^1.5.0, resolve@^1.6.0:
+resolve@^1.1.7, resolve@^1.5.0, resolve@^1.6.0:
   version "1.8.1"
   resolved "http://registry.npm.taobao.org/resolve/download/resolve-1.8.1.tgz#82f1ec19a423ac1fbd080b0bab06ba36e84a7a26"
   dependencies:
@@ -7945,6 +7978,15 @@ stylelint-order@^0.8.1:
     lodash "^4.17.4"
     postcss "^6.0.14"
     postcss-sorting "^3.1.0"
+
+stylelint-webpack-plugin@^0.10.5:
+  version "0.10.5"
+  resolved "http://registry.npm.taobao.org/stylelint-webpack-plugin/download/stylelint-webpack-plugin-0.10.5.tgz#0b6e0d373ff5e03baa8197ebe0f2625981bd266b"
+  dependencies:
+    arrify "^1.0.1"
+    micromatch "^3.1.8"
+    object-assign "^4.1.0"
+    ramda "^0.25.0"
 
 stylelint@^9.3.0:
   version "9.3.0"

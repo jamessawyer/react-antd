@@ -9,9 +9,9 @@ module.exports = {
     index: './src/index.js',
   },
   resolve: {
-    extensions: ['.js', '.jsx', '.json', '.css', '.pcss'],
+    extensions: ['.js', '.jsx', '.json', '.css', '.pcss', '.sss'],
   },
-  devtool: devMode ? 'cheap-eval-source-map' : 'source-map',
+  devtool: devMode ? 'cheap-module-inline-source-map' : 'source-map',
   plugins: [
     new HtmlWebpackPlugin({
       title: 'React Antd 管理后台',

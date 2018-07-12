@@ -28,10 +28,16 @@ module.exports = merge(BASE_CONFIG, {
             loader: 'css-loader',
             options: {
               importLoaders: 1,
+              sourceMap: true,
             },
           },
           {
             loader: 'postcss-loader',
+            options: {
+              ident: 'postcss',
+              sourceMap: true,
+              localIdentName: '[name]_[local]--[hash:base62:5]',
+            },
           },
         ],
         exclude: /[\\/]node_modules[\\/]/,

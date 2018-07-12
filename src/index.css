@@ -1,11 +1,8 @@
+@import 'test.css';
+
 :root {
   --mainColor: yellow;
   --mainFont: 40px;
-}
-
-body {
-  background: var(--mainColor);
-  display: flex;
 }
 
 ::placeholder {
