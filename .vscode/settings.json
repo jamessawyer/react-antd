@@ -13,5 +13,8 @@
     "dist/*": true,
     "*.log": true,
     "yarn.lock": true
+  },
+  "files.associations": {
+    "*.css": "postcss"
   }
 }
